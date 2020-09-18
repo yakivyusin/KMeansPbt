@@ -36,13 +36,4 @@ namespace KMeansPbt
                 .ToArray();
         }
     }
-
-    public class Data
-    {
-        public float[] Features { get; set; }
-        [ColumnName("PredictedLabel")]
-        public uint PredictedClusterId;
-        [ColumnName("Score")]
-        public float[] Distances;
-    }
 }
