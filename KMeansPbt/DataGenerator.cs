@@ -10,7 +10,7 @@ namespace KMeansPbt
         private const int FeatureDimension = 3;
         private readonly Random _random = new Random();
 
-        public Data[] Generate(int unique, int dup = 0)
+        public Data[] Generate(uint unique, uint dup = 0)
         {
             var data = GenerateUniquePoints(unique).ToList();
 
@@ -27,7 +27,7 @@ namespace KMeansPbt
             return data.ToArray();
         }
 
-        private Data[] GenerateUniquePoints(int count)
+        private Data[] GenerateUniquePoints(uint count)
         {
             var set = new HashSet<Data>(new DataComparer());
 
